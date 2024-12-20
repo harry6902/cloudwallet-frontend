@@ -74,7 +74,7 @@ const Payment = ({cookies,setCookie,removeCookie}) => {
       verifySignatures:false
     });
 
-    await axios.post('https://cloudwallet-backend-23ox.vercel.app/api/v1/txn/sign',{
+    await axios.post('https://cloudwallet-backend.vercel.app/api/v1/txn/sign',{
       message:serializedTx,
       retry:false
     },
