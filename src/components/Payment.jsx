@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
-const connection=new Connection("https://api.devnet.solana.com")
+const connection=new Connection("https://api.mainnet-beta.solana.com")
 
 
 const Payment = ({cookies,setCookie,removeCookie}) => {
@@ -74,7 +74,7 @@ const Payment = ({cookies,setCookie,removeCookie}) => {
       verifySignatures:false
     });
 
-    await axios.post('http://localhost:3000/api/v1/txn/sign',{
+    await axios.post('https://cloudwallet-backend-23ox.vercel.app/api/v1/txn/sign',{
       message:serializedTx,
       retry:false
     },
