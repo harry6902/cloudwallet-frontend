@@ -10,7 +10,7 @@ const SignUp = () => {
 
   const handleRegister =async()=>{
 
-    let res = await axios.post("https://cloudwallet-backend-23ox.vercel.app/api/v1/signup", 
+    let res = await axios.post("https://cloudwallet-backend.vercel.app/api/v1/signup", 
       { username, password, email },);
 
 
