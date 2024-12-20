@@ -8,7 +8,7 @@ const SignIn = ({cookies,setCookie,removeCookie}) => {
     const navigate=useNavigate()
     const handleLogin =async()=>{
 
-        const res= await axios.post("https://cloudwallet-backend-23ox.vercel.app/api/v1/signin",{username,password});
+        const res= await axios.post("https://cloudwallet-backend.vercel.app/api/v1/signin",{username,password});
 
         const token = res.data.token;
         setCookie('accessToken', token, { path: '/', maxAge: 3600 });
